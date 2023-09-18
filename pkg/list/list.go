@@ -25,6 +25,11 @@ func NewSliceBasedList() *SliceBasedList {
 	return &SliceBasedList{}
 }
 
+// / create list form slice
+func NewSliceBasedListFromSlice(data []interface{}) *SliceBasedList {
+	return &SliceBasedList{data: data}
+}
+
 // Len returns the length of the list
 func (l *SliceBasedList) Len() int {
 	return len(l.data)
